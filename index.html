@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexora BD – Education & Consulting</title>
+
+  <!-- Mobile responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Nexora BD provides study abroad consulting, documentation support, and cultural training for students aiming to study overseas.">
+  <meta name="keywords" content="Nexora, Nexora BD, education consulting, study abroad, Bangladesh, overseas study, student consulting">
+
+  <!-- Open Graph (for SNS preview) -->
+  <meta property="og:title" content="Nexora BD – Education & Consulting">
+  <meta property="og:description" content="Student-focused study abroad and education consulting from Bangladesh.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --primary: #004f7a;
+      --primary-light: #e6f3fb;
+      --accent: #f5a623;
+      --text: #333;
+      --bg: #fafafa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary), #0071b1);
+      color: white;
+      padding: 64px 0 72px 0;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      opacity: 0.9;
+      margin-bottom: 16px;
+    }
+
+    .hero-tagline {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: 0.8;
+    }
+
+    .hero-cta {
+      margin-top: 16px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #222;
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1px solid white;
+      color: white;
+      padding: 9px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 14px;
+    }
+
+    .hero-card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .section {
+      padding: 48px 0;
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--primary-light);
+      padding: 18px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: #fff;
+      color: var(--primary);
+      margin-bottom: 6px;
+      border: 1px solid rgba(0, 79, 122, 0.12);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-box {
+      background: var(--primary-light);
+      padding: 18px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .contact-row {
+      margin-bottom: 8px;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .contact-value {
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      padding: 16px 0 24px 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="logo">Nexora BD</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-tagline">Study Abroad · Consulting · Guidance</div>
+        <h1>Student-focused education consulting from Bangladesh to the world.</h1>
+        <p>
+          Nexora BD helps students prepare, apply, and adapt to overseas universities –
+          with honest advice, careful screening, and practical cultural guidance.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Book a free consultation</a>
+          <a href="#services" class="btn-secondary">View services</a>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card">
+          <h3>Quick snapshot</h3>
+          <p>• Countries: Korea, Europe, etc.</p>
+          <p>• Support: Screening, documents, visa guidance</p>
+          <p>• Client: Serious students & parents</p>
+          <p style="margin-top:8px; font-size:12px; opacity:.9;">
+            This is a demo site. Replace texts with your real content later.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Nexora BD</h2>
+      <p class="section-subtitle">
+        Education consulting with realistic expectations, clear communication, and long-term student success in mind.
+      </p>
+      <div class="two-col">
+        <div>
+          <p>
+            Nexora BD focuses on guiding students from Bangladesh who want to study abroad –
+            not just by filling forms, but by helping them understand the lifestyle, culture,
+            and academic expectations of their destination countries.
+          </p>
+          <p style="margin-top:10px;">
+            We emphasize transparent information, honest screening, and proper preparation so that
+            both students and parents can make confident decisions.
+          </p>
+        </div>
+        <div class="card">
+          <span class="badge">Highlights</span>
+          <p>• One-to-one counselling</p>
+          <p>• University & program selection support</p>
+          <p>• Application & document guidance</p>
+          <p>• Pre-departure and cultural briefings</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-subtitle">
+        You can adjust, remove, or add services here according to your real business model.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Counselling & Screening</h3>
+          <p>
+            Initial assessment of academic background, language ability, and budget
+            to match realistic study abroad options.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Application Support</h3>
+          <p>
+            Guidance on university application forms, required documents,
+            timelines, and basic checklist management.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Pre-departure Guidance</h3>
+          <p>
+            Basic cultural briefing, lifestyle tips, and expectations
+            to help students adapt faster in their new country.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">
+        A simple 4-step flow you can explain to students and parents.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge">Step 1</span>
+          <h3>Initial Meeting</h3>
+          <p>
+            Short discussion to understand the student's goals, budget, and target country.
+          </p>
+        </div>
+        <div class="card">
+          <span class="badge">Step 2</span>
+          <h3>Options & Plan</h3>
+          <p>
+            Suggest possible universities/programs and a realistic application schedule.
+          </p>
+        </div>
+        <div class="card">
+          <span class="badge">Step 3</span>
+          <h3>Documents & Application</h3>
+          <p>
+            Support with forms, basic document guidance, and tracking application status.
+          </p>
+        </div>
+        <div class="card">
+          <span class="badge">Step 4</span>
+          <h3>Pre-departure</h3>
+          <p>
+            Share basic information on culture, daily life, and what to prepare before flying.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        Replace these contact details with your real email, phone, and address.
+      </p>
+      <div class="two-col">
+        <div>
+          <p>
+            If you are a student or parent interested in overseas study, you can reach out
+            with basic information (name, current education, target country, and questions).
+          </p>
+          <p style="margin-top:10px;">
+            We reply in English or Bengali, depending on your preference.
+          </p>
+        </div>
+        <div class="contact-box">
+          <div class="contact-row">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">info@nexorabd.net (example)</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Phone / WhatsApp</div>
+            <div class="contact-value">+880-1X-XXXX-XXXX (example)</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Sylhet, Bangladesh (example)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Nexora BD · All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
